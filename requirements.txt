@@ -1,0 +1,5 @@
+SQLAlchemy~=2.0.20
+pydantic~=2.3.0
+fastapi~=0.101.1
+requests~=2.31.0
+pyproj~=3.6.0

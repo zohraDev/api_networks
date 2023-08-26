@@ -25,7 +25,7 @@ def fill_operator_table():
 
 
 def fill_network_offers_table():
-    db=SessionLocal()
+    db = SessionLocal()
     try:
         with open(f"{os.path.join(pathlib.Path(__file__).parent.resolve(), 'Sites_mobiles.csv')}", 'r') as csvfile:
             # create the object of csv.reader()

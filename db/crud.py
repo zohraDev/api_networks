@@ -28,13 +28,15 @@ def create_network_offer(db: Session, network_offer: schemas.NetWorkOffers):
 
 
 def get_network_offer_by_coordinate(db: Session, coordinate: dict):
-    db.connection()
+
     return db.query(models.NetWorkOffers).filter(
         models.NetWorkOffers.long == coordinate["long"] and models.NetWorkOffers.lat == coordinate["lat"]
-    )
+    ).all()
 
 
 def get_operator_by_code(db: Session, code: int):
-    return db.query(models.Operators).filter(models.Operators.code == code)
+    return db.query(models.Operators).filter(models.Operators.code == code).all()
+
+
 
 

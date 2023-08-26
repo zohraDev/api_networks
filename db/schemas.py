@@ -1,4 +1,3 @@
-from typing import Union
 from pydantic import BaseModel
 
 
@@ -11,8 +10,6 @@ class Operators(BaseModel):
 
 
 class NetWorkOffers(BaseModel):
-
-    id: int
     code: int
     long: float
     lat: float
