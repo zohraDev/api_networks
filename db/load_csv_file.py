@@ -12,16 +12,16 @@ models.Base.metadata.create_all(bind=engine)
 
 def fill_operator_table():
     db = SessionLocal()
-    data = {"orange": 20801, "SFR": 20810, "Free": 2081, "Bouygue": 20820}
+    data = {"orange": 20801, "SFR": 20810, "Free": 20815, "Bouygue": 20820}
 
     for name, code in data.items():
         try:
             operator = schemas.Operators(name=name, code=code)
             crud.create_operator(db, operator)
         except Exception as ex:
-            print(f"operator {name} - {code} cannot be process.\n{str(ex)}")
+            print(f"Operator {name} - {code} cannot be process.\n{str(ex)}")
             continue
-    print(f"data loading into the 'operators' is complete")
+    print(f"Data loading into the 'operators' is complete")
 
 
 def fill_network_offers_table():
@@ -54,7 +54,7 @@ def fill_network_offers_table():
     except FileNotFoundError:
         print("File not found. Check the path variable and filename")
         exit()
-    print(f"data loading into the 'networkoffers' is complete")
+    print(f"Data loading into the 'networkoffers' is complete")
 
 
 fill_operator_table()
