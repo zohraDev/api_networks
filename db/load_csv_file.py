@@ -11,6 +11,9 @@ models.Base.metadata.create_all(bind=engine)
 
 
 def fill_operator_table():
+    """
+    fill the table operator
+    """
     db = SessionLocal()
     data = {"orange": 20801, "SFR": 20810, "Free": 20815, "Bouygue": 20820}
 
@@ -25,6 +28,9 @@ def fill_operator_table():
 
 
 def fill_network_offers_table():
+    """
+       fill the table Networkoffers
+       """
     db = SessionLocal()
     try:
         with open(f"{os.path.join(pathlib.Path(__file__).parent.resolve(), 'Sites_mobiles.csv')}", 'r') as csvfile:

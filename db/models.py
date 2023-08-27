@@ -1,7 +1,6 @@
 from sqlalchemy import (Boolean,
                         Column,
-                        ForeignKey,INT, FLOAT, Text)
-
+                        ForeignKey, INT, FLOAT, Text)
 
 from db.database import Base
 

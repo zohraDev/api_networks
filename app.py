@@ -21,19 +21,18 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/api_pro/")
-async def test(address: str, db: Session = Depends(get_db)):
+@app.get("/api_networks_test/")
+async def api_networks(address: str, db: Session = Depends(get_db)):
     if not address:
         raise HTTPException(status_code=404, detail=f"address parameter missing")
 
     try:
         long, lat = get_gps_coordinate_from_address(address)
-        print("long, lat", long, lat)
+
     except HTTPException as err:
         raise HTTPException(status_code=err.status_code, detail=f"Http Error: {err.detail}")
 
     datas = get_response(db, lat, long)
-
     if not datas and long and lat:
         raise HTTPException(status_code=404, detail=f"There is no network information available at this address: {address}")
 

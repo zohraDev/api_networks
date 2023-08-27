@@ -5,15 +5,11 @@ from db.crud import get_network_offer_by_coordinate, get_operator_by_code
 
 
 def lamber93_to_gps(x, y):
-    """
-    :param x:
-    :param y:
-    :return:
-    """
+
     # 4326 WGS 84 (GPS)
     # 2154 RGF93 / Lambert-93
     transformer = Transformer.from_crs("EPSG:2154", "EPSG:4326", always_xy=True)
-    # long, lat
+
 
     return transformer.transform(x, y)
 
@@ -42,6 +38,8 @@ def get_response(db, lat, long):
         "long": long
     }
     network_offers = get_network_offer_by_coordinate(db, data)
+
+    network_offers
     datas = {}
     for el in network_offers:
         operator = get_operator_by_code(db, el.code)
