@@ -1,6 +1,5 @@
-# api_networks_test
-# Mobile Network 
-# Small API project that we can request with a textual address request and get 2G/3G/4G network coverage for each operator (if available) in the response.
+api_networks_test
+Small API project that we can request with a textual address request and get 2G/3G/4G network coverage for each operator (if available) in the response.
 
 API Documentation:
 An external API is used to calculate the coordinate(4326 WGS 84) from an address. You can check the documentation how to use is it: https://adresse.data.gouv.fr/api-doc/adresse.
