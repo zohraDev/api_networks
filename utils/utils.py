@@ -10,7 +10,6 @@ def lamber93_to_gps(x, y):
     # 2154 RGF93 / Lambert-93
     transformer = Transformer.from_crs("EPSG:2154", "EPSG:4326", always_xy=True)
 
-
     return transformer.transform(x, y)
 
 
