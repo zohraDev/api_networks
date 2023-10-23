@@ -21,7 +21,7 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/api_networks_test/")
+@app.get("/api_networks/")
 async def api_networks(address: str, db: Session = Depends(get_db)):
     if not address:
         raise HTTPException(status_code=404, detail=f"address parameter missing")
