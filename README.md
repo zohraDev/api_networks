@@ -16,7 +16,7 @@ Before make sure you have on your machine:
 
 ######   Commands: open a terminal and : 
 
-1)   Clone the repository on the terminal or command prompt :  ``` git clone https://github.com/zohraDev/api_networks_test.git ```
+1)   Clone the repository on the terminal or command prompt :  ``` git clone https://github.com/zohraDev/api_networks.git ```
 2) Access to the directory of the project : ``` cd api_networks_test ``` 
 3) Create a virtual environment: ``` pipenv install ```
 > Note: `If you choose other virtual environment refer to own documentation how  to install and activate the victual environment `
@@ -24,8 +24,8 @@ Before make sure you have on your machine:
 4) Activate the virtual environment: ``` pipenv shell ```,
 5) Install the packages with pip: ``` pip install -r requirements.txt ```
 6) Create database and load data from CSV file:   *Sites_mobiles.csv*:
-    - In the file ``` bash_file.bash ``` update the environment variable ``` PROJETC_PATH ``` the path to the directory ``` api_networks_test ```	
-    - ``` cd api_networks_test/ ```
+    - In the file ``` bash_file.bash ``` update the environment variable ``` PROJETC_PATH ``` the path to the directory ``` api_networks ```	
+    - ``` cd api_networks/ ```
 	- ``` source bash_file.bash ```
 	- ``` python3  db/load_csv_file.py ```  for unix/macOS
 	  ``` py db/load_csv_file.py ``` for windows 
@@ -37,11 +37,11 @@ Before make sure you have on your machine:
     
      - On the browser enter the url: 
          ``` sh  
-         http://0.0.0.0:8000/api_networks_test/?address="enter the adresse hier" 
+         http://0.0.0.0:8000/api_networks/?address="enter the adresse hier" 
           ``` 
          Example: 
         ```sh 
-       http://0.0.0.0:8000/api_networks_test/?address=502+Kernigou+29242+Ouessant
+       http://0.0.0.0:8000/api_networks/?address=502+Kernigou+29242+Ouessant
         ```
      
      - Or enter the following URL on the browser:
